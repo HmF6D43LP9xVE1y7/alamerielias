@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="author" content="Tim Ott">
+        <meta name="author" content="Timo Hlubek, Tim Ott">
         <meta name="copyright" content="Elias Al-Ameri">
         <meta name="language" content="English">
         <meta name="revisit-after" content="7 days">
@@ -37,18 +37,23 @@
         </title>
     </head>
     <body oncontextmenu="return false" onkeydown="setImage()">
-        <label class="nav font underline" onclick="overlay();" for="checkBox">
+        <label class="nav font underline" onclick="overlayInfo();" for="checkBoxInfo">
             Elias Al&dash;Ameri
-            <input type="checkbox" id="checkBox">
+            <input type="checkbox" id="checkBoxInfo">
         </label>
+        <label class="overview font underline" onclick="overlayGrid();" for="checkBoxGrid">
+            <input type="checkbox" id="checkBoxGrid">
+        </label>
+        <div class="gridDescription font">
+        </div>
         <div class="lightbox" onclick="setImage();">
             <img class="lightboxSrc" src="" title="&#169; Elias Al&dash;Ameri" alt="&#169; Elias Al&dash;Ameri">
         </div>
-        <div class="overlay">
+        <div class="overlayInfo">
             <div class="font center">
                 My name is Elias Al&dash;Ameri. I come from switzerland and Iraq and I'm a passionate artist and fashion photograper. I successfully completed my Swiss Certificate of Competence as a photographer EFZ at the School of Art and Design Zurich, Switzerland.<br>I have a lot of creative practices. I am interested in all kinds of different art forms like visual arts as in sculptures, paintings and fashion design. My life is a constant creative process. New creative concepts are always welcome.<br><br>
                 <div style="text-align: right;">
-                    اسمي إلياس العامري. أنا من سويسرا والعراق، وأنا فنان ومصور أزياء شغوف، وقد أكملت بنجاح شهادة الكفاءة الفيدرالية كمصور  فوتوغرافي في مدرسة الفنون والتصميم في زيورخ سويسرا<br>لدي العديد من الأنشطة الإبداعية. أنا مهتم بجميع أشكال الفنون الممكنة، مثل الفنون البصرية كالتماثيل واللوحات وتصميم الأزياء. حياتي عباره عن عملية إبداعية مستمرة. مشاريع  المفاهيم الإبداعية الجديدة دائماً مرحب بها
+                اسمي إلياس العامري. أنا من سويسرا والعراق، وأنا فنان ومصور أزياء شغوف، وقد أكملت بنجاح شهادة الكفاءة الفيدرالية كمصور  فوتوغرافي في مدرسة الفنون والتصميم في زيورخ سويسرا<br>لدي العديد من الأنشطة الإبداعية. أنا مهتم بجميع أشكال الفنون الممكنة، مثل الفنون البصرية كالتماثيل واللوحات وتصميم الأزياء. حياتي عباره عن عملية إبداعية مستمرة. مشاريع  المفاهيم الإبداعية الجديدة دائماً مرحب بها
                 </div><br>
                 <div id="mail" onclick="mail();">
                 </div>
@@ -57,9 +62,62 @@
                 </a>
             </div>
         </div>
-        <script src="js/overlay.min.js"></script>
-        <script src="js/contact.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <script src="js/preventDrag.min.js"></script>
+        <div class="overlayGrid">
+            <img src="assets/content/elias_al_ameri_web_2024_000.jpg" class="content" caption="Fashion shoot for Marino Pranjic">
+            <img src="assets/content/elias_al_ameri_web_2024_001.jpg" class="content" caption="Personal Project, Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_002.jpg" class="content" caption="Personal Project">
+            <img src="assets/content/elias_al_ameri_web_2024_003.gif" class="content" caption="Fashion shoot for Sadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_004.jpg" class="content" caption="Fashion shoot for Naïma Naas">
+            <img src="assets/content/elias_al_ameri_web_2024_005.jpg" class="content" caption="Personal Project, I painted a backpack white and attached a white flag with a rope and walked 100km with it, over time the white of the backpack became more and more worn and the white flag I dragged behind me on the ground was slowly torn to shreds with all the dirt and moisture.">
+            <img src="assets/content/elias_al_ameri_web_2024_006.jpg" class="content" caption="Personal Project, Behind the scenes Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_007.jpg" class="content" caption="Fashion shoot for Atelier Aniq">
+            <img src="assets/content/elias_al_ameri_web_2024_008.jpg" class="content" caption="Personal Project">
+            <img src="assets/content/elias_al_ameri_web_2024_009.jpg" class="content" caption="Personal Project">
+            <img src="assets/content/elias_al_ameri_web_2024_010.jpg" class="content" caption="">
+            <img src="assets/content/elias_al_ameri_web_2024_011.jpg" class="content" caption="Personal Project, Iraq series">
+            <img src="assets/content/elias_al_ameri_web_2024_012.jpg" class="content" caption="Shoot for Leonardo VINĆ">
+            <img src="assets/content/elias_al_ameri_web_2024_013.jpg" class="content" caption="Personal Project, I painted a backpack white and attached a white flag with a rope and walked 100km with it, over time the white of the backpack became more and more worn and the white flag I dragged behind me on the ground was slowly torn to shreds with all the dirt and moisture.">
+            <img src="assets/content/elias_al_ameri_web_2024_014.jpg" class="content" caption="Personal Project, Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_015.jpg" class="content" caption="Fashion shoot for Marino Pranjic">
+            <img src="assets/content/elias_al_ameri_web_2024_016.jpg" class="content" caption="Prototypes shoot Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_017.jpg" class="content" caption="Personal Project, Vanishing Point, The goal with my project was to design high fashion pieces. to give the clothes a past and history, i made all outfits from pre used materials from Lesbos, Greece. From life jackets, parachutes, headscarves and all the fabrics and items I found there, all of which I recyclet. I only worked with materials that are somehow connected to the people, items with a backstory, to make a political statement and draw attention to the situation of the refugee movement worldwide.">
+            <img src="assets/content/elias_al_ameri_web_2024_018.jpg" class="content" caption="Personal Project">
+            <img src="assets/content/elias_al_ameri_web_2024_019.jpg" class="content" caption="Personal Project, Swiss Army">
+            <img src="assets/content/elias_al_ameri_web_2024_020.jpg" class="content" caption="Personal Project, Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_021.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_022.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_023.jpg" class="content" caption="Fashion shoot for Marino Pranjic">
+            <img src="assets/content/elias_al_ameri_web_2024_024.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_025.gif" class="content" caption="Fashion Shoot for Naïma Naas">
+            <img src="assets/content/elias_al_ameri_web_2024_026.jpg" class="content" caption="Personal Project, Vanishing Point, The goal with my project was to design high fashion pieces. to give the clothes a past and history, i made all outfits from pre used materials from Lesbos, Greece. From life jackets, parachutes, headscarves and all the fabrics and items I found there, all of which I recyclet. I only worked with materials that are somehow connected to the people, items with a backstory, to make a political statement and draw attention to the situation of the refugee movement worldwide.">
+            <img src="assets/content/elias_al_ameri_web_2024_027.jpg" class="content" caption="Fashion shoot for Marino Pranjic">
+            <img src="assets/content/elias_al_ameri_web_2024_028.jpg" class="content" caption="Personal Project, Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_029.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_030.jpg" class="content" caption="Personal Project, Vanishing Point, The goal with my project was to design high fashion pieces. to give the clothes a past and history, i made all outfits from pre used materials from Lesbos, Greece. From life jackets, parachutes, headscarves and all the fabrics and items I found there, all of which I recyclet. I only worked with materials that are somehow connected to the people, items with a backstory, to make a political statement and draw attention to the situation of the refugee movement worldwide.">
+            <img src="assets/content/elias_al_ameri_web_2024_031.jpg" class="content" caption="Fashion shoot for Marino Pranjic">
+            <img src="assets/content/elias_al_ameri_web_2024_032.jpg" class="content" caption="Art installation for Thilo Hoffmann">
+            <img src="assets/content/elias_al_ameri_web_2024_033.jpg" class="content" caption="Personal Project">
+            <img src="assets/content/elias_al_ameri_web_2024_034.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_035.jpg" class="content" caption="">
+            <img src="assets/content/elias_al_ameri_web_2024_036.jpg" class="content" caption="Personal project">
+            <img src="assets/content/elias_al_ameri_web_2024_037.jpg" class="content" caption="Personal Project, Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_038.jpg" class="content" caption="Pesonal Project, Sculpture “key to life”">
+            <img src="assets/content/elias_al_ameri_web_2024_039.gif" class="content" caption="Personal project, Video installation “safe space”">
+            <img src="assets/content/elias_al_ameri_web_2024_040.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_041.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_042.jpg" class="content" caption="Fashion Shoot for Shadei Blum">
+            <img src="assets/content/elias_al_ameri_web_2024_043.jpg" class="content" caption="Fashion shoot for Marino Pranjic">
+            <img src="assets/content/elias_al_ameri_web_2024_044.jpg" class="content" caption="Fashion shoot for Naïma Naas">
+            <img src="assets/content/elias_al_ameri_web_2024_045.jpg" class="content" caption="Personal Project, Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_046.jpg" class="content" caption="Fashion shoot for Naïma Naas">
+            <img src="assets/content/elias_al_ameri_web_2024_047.jpg" class="content" caption="Personal project, Prototypes shoot Vanishing point">
+            <img src="assets/content/elias_al_ameri_web_2024_048.jpg" class="content" caption="Fashion shoot for Naïma Naas">
+            <img src="assets/content/elias_al_ameri_web_2024_049.jpg" class="content" caption="Fashion shoot for Naïma Naas">
+            <img src="assets/content/elias_al_ameri_web_2024_050.jpg" class="content" caption="Personal Project, Iraq series">
+            <img src="assets/content/elias_al_ameri_web_2024_051.gif" class="content" caption="Personal Project, Behind the scenes Vanishing Point">
+            <img src="assets/content/elias_al_ameri_web_2024_052.jpg" class="content" caption="Fashion shoot for Marino Pranjic">
+            <img src="assets/content/elias_al_ameri_web_2024_053.jpg" class="content" caption="Personal Project, I painted a backpack white and attached a white flag with a rope and walked 100km with it, over time the white of the backpack became more and more worn and the white flag I dragged behind me on the ground was slowly torn to shreds with all the dirt and moisture.">
+        </div>
+        <script src="js/base.min.js"></script>
     </body>
 </html>
