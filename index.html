@@ -9,7 +9,7 @@
         right: 0;
         bottom: 0;
         z-index: 4;
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -37,6 +37,9 @@
         cursor: pointer;
         text-decoration: underline;
       }
+      .content-container button {
+                transform: translateY(-80px);
+      }
       .content-container ul {
         list-style: none;
       }
@@ -49,6 +52,10 @@
       ul li {
         margin: 15px;
         text-align: center;
+
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
       }
       @media only screen and (max-width: 767px) {
         ul li {
@@ -201,7 +208,6 @@ function closePdfAuth() {
             <li><a href="#" class="obfuscated-link" data-index="1"><img src="assets/asset_folder.png"><br>CV_Deutsch_Elias_Al-Ameri</a></li>
             <li><a href="#" class="obfuscated-link" data-index="2"><img src="assets/asset_folder.png"><br>CV_English_Elias_Al-Ameri</a></li>
           </ul>
-          <br>
           <br>
           <script>
           const encodedPaths = [
